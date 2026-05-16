@@ -1,46 +1,38 @@
 # Car Store Management System
 
-A Java-based Car Store Management System developed using JDBC and MySQL for managing car details and customer records through a console-based application.
+A Java-based full-stack Car Store Management System with MySQL database integration.
 
 ## Features
-- Add new cars to the store
-- View available cars
-- Manage customer details
-- Store and retrieve data using MySQL
-- JDBC database connectivity
-- Console-based user interaction
-- Object-Oriented Programming structure
+- View, Add, Remove cars (Admin)
+- Book a car with customer details and auto-generated bill (with GST)
+- Search cars by brand
+- Filter by fuel type (Petrol / Diesel / Electric)
+- Filter by price range
+- Sort by price (low to high)
+- Sort by year (newest first)
+- Add and view car reviews
+- Role-based Admin panel with authentication
+- Sales report with total revenue
+- Input validation and exception handling throughout
+- Date & time stamped bookings
 
-## Technologies Used
-- Java
-- JDBC
-- MySQL
-- Eclipse IDE
-- Git & GitHub
+## Tech Stack
+Java | MySQL | JDBC | OOP | Collections | Exception Handling | Streams | Enum
 
 ## OOP Concepts Used
-- Classes & Objects
-- Encapsulation
-- Methods
-- Constructors
-- Database Abstraction
-
-## Project Structure
-- `Car.java` → Handles car details
-- `Customer.java` → Handles customer information
-- `Carstore.java` → Main store operations
-- `DatabaseConnection.java` → MySQL database connection
-- `Carstoreapp.java` → Main application entry point
+- Classes & Objects (Car, Customer)
+- Encapsulation (private fields, getters/setters)
+- Abstraction (DatabaseConnection)
+- Enum (CarStatus: AVAILABLE, BOOKED, SOLD)
+- Exception Handling (try/catch/throw)
 
 ## How to Run
 1. Import `carstore_db.sql` into MySQL
-2. Update MySQL username/password in `DatabaseConnection.java`
-3. Open project in Eclipse IDE
-4. Run `Carstoreapp.java`
+2. Update `DatabaseConnection.java` with your local MySQL password
+3. Open project in Eclipse or IntelliJ
+4. Run `carstoreapp.java`
 
 ## Database Setup
 ```sql
-CREATE DATABASE carstore_db;
-## Database Setup
-```sql
-CREATE DATABASE carstore_db;
+mysql -u root -p < carstore_db.sql
+```
